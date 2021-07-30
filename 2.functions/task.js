@@ -5,22 +5,18 @@ function getArrayParams(arr) {
   min = Infinity;
   max = -Infinity;
   sum = 0;
+  avg = 0;
 
   for(let i = 0; i < arr.length; i++) {
     sum += arr[i];
-  }
-
-  for(i = 0; i < arr.length; i++) {    
     if (arr[i] > max) {
-        max = arr[i];
+      max = arr[i];
     } 
-  }
 
-  for(i = 0; i < arr.length; i++) {
     if (arr[i] < min) {
-        min = arr[i];
+      min = arr[i];
     }
-  }
+  }  
 
   avg = Number((sum / arr.length).toFixed(2));
 
@@ -62,10 +58,8 @@ function worker2(arr) {
   for(let i = 0; i < arr.length; i++) {
     if (arr[i] > maxArg) {
       maxArg = arr[i];
-    }
-  }
+    } 
 
-  for(let i = 0; i < arr.length; i++) {
     if (arr[i] < minArg) {
       minArg = arr[i];
     }
